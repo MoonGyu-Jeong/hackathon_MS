@@ -1,0 +1,17 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "adminUsername": {
+        "value": "moon"
+      },
+      "adminPasswordOrKey": {
+        "reference": {
+          "keyVault": {
+            "id": "/subscriptions/99688a53-3714-49e7-b822-b8ee076c772d/resourceGroups/moonRG/providers/Microsoft.KeyVault/vaults/moonRG-KeyVault"
+          },
+          "secretName": "adminPassword"
+        }
+      }
+    }
+  }
